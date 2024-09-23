@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" />
-    <title>Belém Recicla</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+    <title>Eco-Guia</title>
 </head>
 <body>
     <header>
-        <div id = "cabeça">
-            <h1>Belém Recicla</h1>
-            <img src="imagens/mapa.PNG" alt="mapa">
-        </div>
+        <nav class="menu-header">
+            <div class="logo">
+              <a href="index.html"><img class="img-logo" src="assets/img/logotipo.png" alt="logo_EcoGuia"></a>
+            </div>
+      
+            <ul class="nav-links">
+              <li class="icones"><a class="item-link" href="#">Classificações de lixos</a></li>
+              <li class="icones"><a class="item-link" href="#">Fale Conosco</a></li>
+              <li class="icones"><a class="item-link" href="cadastro.html">Cadastre-se</a></li>
+              <li class="icones"><a class="item-link" href="#">Configurações</a></li>
+      
+            </ul>
+            <!--Menu hambuguer-->
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+          </nav>
     </header>
     <nav>
         <div class="box">
-        <img src="imagens/barcode-scan-icon.png" alt="scan">
+        <img src="assets/img/barcode-scan-icon.png" alt="scan">
             <p>Scaneie e identifique o objeto</p>
         </div>
     </nav>
@@ -30,45 +47,53 @@
                     <p>Saiba Mais</p>
                     <h4>Vasos de Garrafa de Vidro</h4>
                 </div>
-                <img src="imagens/artesanato-com-garrafas-de-vidro-1-removebg-preview.png" alt="artesanato">
+                <img src="assets/img/artesanato-com-garrafas-de-vidro-1-removebg-preview.png" alt="artesanato">
             </div>
              <div class="item">
                 <div class="text">
                     <p>Saiba mais</p>
                     <h4>Porta-retrato de pote de vidro</h4>
                 </div>
-                <img src="imagens/portavidro.png" alt="portavidro">
+                <img src="assets/img/portavidro.png" alt="portavidro">
             </div>
         </div>
         <div class="separator"></div>
         <div class = "catego">
             <h3>Categorias</h3>
-            <p>Veja todos</p>
         </div>
-        <div class = "rias">
-            <div class = "rias-item">
+        <div class="rias">
+            <div class="rias-item" id="red">
                 <div class="lixo red">
-                    <img src="imagens/lixovermelho-removebg-preview.png" alt="Lixo vermelho">
+                    <img src="assets/img/lixovermelho-removebg-preview.png" alt="Lixo vermelho">
                 </div>
-                    <p>Plástico</p>
+                <p>Plástico</p>
             </div>
-            <div class="rias-item">
+            <div class="rias-item" id="blue">
                 <div class="lixo blue">
-                    <img src="imagens/lixoazul-removebg-preview.png" alt="Lixo azul">
+                    <img src="assets/img/lixoazul-removebg-preview.png" alt="Lixo azul">
                 </div>
-                    <p>Papel</p>
+                <p>Papel</p>
             </div>
-            <div class = "rias-item">
+            <div class="rias-item" id="yellow">
                 <div class="lixo yellow">
-                    <img src="imagens/lixoamarelo.png" alt="Lixo amarelo">
+                    <img src="assets/img/lixoamarelo.png" alt="Lixo amarelo">
                 </div>
-                    <p>Metais</p>
+                <p>Metais</p>
             </div>
-            <div class="rias-item">
+            <div class="rias-item" id="green">
                 <div class="lixo green">
-                    <img src="imagens/lixoverde-removebg-preview.png" alt="Lixo verde">
+                    <img src="assets/img/lixoverde-removebg-preview.png" alt="Lixo verde">
                 </div>
                 <p>Vidro</p>
+            </div>
+        </div>
+        
+        <!-- Card de descrição que aparece ao clicar -->
+        <div id="card-container" class="card hidden">
+            <div class="card-content">
+                <h4 id="card-title"></h4>
+                <p id="card-description"></p>
+                <button id="close-card">Fechar</button>
             </div>
         </div>
         <div class="separator"></div>
@@ -76,120 +101,7 @@
     <div class = "histo">
         <h3>Histórico</h3>
     </div>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" />
-    <title>Belém Recicla</title>
-</head>
-<body>
-    <header>
-        <div id="cabeça">
-            <h1>Belém Recicla</h1>
-            <img src="imagens/mapa.PNG" alt="mapa">
-        </div>
-    </header>
-    <nav>
-        <div class="box">
-            <img src="imagens/barcode-scan-icon.png" alt="scan">
-            <p>Scaneie e identifique o objeto</p>
-        </div>
-    </nav>
-    <main>
-        <div class="ideias">
-            <h3>Ideias Populares</h3>
-            <p>Veja todos</p>
-        </div>
-        <div class="populares">
-            <div class="item">
-                <div class="text">
-                    <p>Saiba Mais</p>
-                    <h4>Vasos de Garrafa de Vidro</h4>
-                </div>
-                <img src="imagens/artesanato-com-garrafas-de-vidro-1-removebg-preview.png" alt="artesanato">
-            </div>
-            <div class="item">
-                <div class="text">
-                    <p>Saiba mais</p>
-                    <h4>Porta-retrato de pote de vidro</h4>
-                </div>
-                <img src="imagens/portavidro.png" alt="portavidro">
-            </div>
-        </div>
-        <div class="separator"></div>
-        <!-- Categorias -->
-        <div class="catego">
-            <h3>Categorias</h3>
-            <p>Veja todos</p>
-        </div>
-        <div class="rias">
-            <div class="rias-item" data-desc="Plástico é um material reciclável que inclui garrafas PET, sacolas plásticas, etc.">
-                <div class="lixo red">
-                    <img src="imagens/lixovermelho-removebg-preview.png" alt="Lixo vermelho">
-                </div>
-                <p>Plástico</p>
-            </div>
-            <div class="rias-item" data-desc="Papel reciclável inclui jornais, cadernos velhos, caixas de papelão, etc.">
-                <div class="lixo blue">
-                    <img src="imagens/lixoazul-removebg-preview.png" alt="Lixo azul">
-                </div>
-                <p>Papel</p>
-            </div>
-            <div class="rias-item" data-desc="Metais recicláveis incluem latinhas de refrigerante, tampas de garrafa, etc.">
-                <div class="lixo yellow">
-                    <img src="imagens/lixoamarelo.png" alt="Lixo amarelo">
-                </div>
-                <p>Metais</p>
-            </div>
-            <div class="rias-item" data-desc="Vidros incluem garrafas de vidro, frascos, copos quebrados, etc.">
-                <div class="lixo green">
-                    <img src="imagens/lixoverde-removebg-preview.png" alt="Lixo verde">
-                </div>
-                <p>Vidro</p>
-            </div>
-        </div>
 
-        <!-- Área onde a descrição aparecerá -->
-        <div id="descricao" style="display: none; border-top: 1px solid #ddd; padding-top: 10px;">
-            <h4>Descrição:</h4>
-            <p id="descricao-texto"></p>
-        </div>
-        
-        <div class="separator"></div>
-    </main>
-    <div class="histo">
-        <h3>Histórico</h3>
-    </div>
-
-    <!-- JavaScript -->
-    <script>
-        // Selecionar todos os itens de categoria
-        document.querySelectorAll('.rias-item').forEach(function(item) {
-            item.addEventListener('click', function() {
-                // Pega a descrição do atributo data-desc do item clicado
-                var descricao = item.getAttribute('data-desc');
-                
-                // Seleciona a área de descrição
-                var descricaoDiv = document.getElementById('descricao');
-                var descricaoTexto = document.getElementById('descricao-texto');
-
-                // Insere a descrição no parágrafo
-                descricaoTexto.textContent = descricao;
-
-                // Exibe a área da descrição com animação de deslizamento
-                descricaoDiv.style.display = 'block';
-                descricaoDiv.style.height = '0';
-                descricaoDiv.style.overflow = 'hidden';
-                descricaoDiv.style.transition = 'height 0.5s ease';
-
-                setTimeout(function() {
-                    descricaoDiv.style.height = '100px'; // Ajuste a altura conforme necessário
-                }, 10);
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
