@@ -387,3 +387,15 @@ nav {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* MUDEI AQUI */
+
+a {
+  text-decoration: none; 
+  color: green;
+}
+
+a:hover {
+  text-decoration: none; 
+  color: darkgreen; 
+}
